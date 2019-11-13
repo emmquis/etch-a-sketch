@@ -1,1 +1,1 @@
-Project to create an Etch-e-Sketch
+Project to create an Etch-a-Sketch with HTML, CSS and JavaScript
