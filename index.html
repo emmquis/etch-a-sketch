@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ETCH-a-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="container">
+        <div id="squares">1</div>
+        <div class="squares">2</div>
+        <div class="squares">3</div>
+        <div class="squares">4</div>
+        <div class="squares">5</div>
+        <div class="squares">6</div>
+        <div class="squares">7</div>
+        <div class="squares">8</div>
+        <div class="squares">9</div>
+        <div class="squares">10</div>
+        <div class="squares">11</div>
+        <div class="squares">12</div>
+        <div class="squares">13</div>
+        <div class="squares">14</div>
+        <div class="squares">15</div>
+        <div class="squares">16</div>
+    </div>
+
+    <script>
+        //const container = document.querySelector('#container');
+
+        document.getElementById("squares").addEventListener("mouseover", mouseOver);
+
+        function mouseOver() {
+            document.getElementById("container").getElementsByClassName("squares").style.color =  "red";
+        }
+    </script>
+</body>
+</html>
