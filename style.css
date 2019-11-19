@@ -5,9 +5,12 @@
     transition: .05s;
 }
 
-
+.hovered {
+    background-color: pink;
+}
 
 #container {
+    background-color: black;
     display: grid;
     grid-template-columns: auto auto auto auto;
     padding: 10px;
