@@ -31,17 +31,22 @@
 
     <script>
         function addDivs(count) { 
-            const container = document.querySelector('#container');
+            //const container = document.querySelector('#container');
+            
             for(var i = 0; i < count; i++) {
-                const content = document.createElement('div');
-                content.classList.add('squares');
+                var content = document.createElement('div');
+                content.className = "squares";
 
-                container.appendChild(content);
+                document.getElementById('container').appendChild(content);
+
             }
             
                 
     
         }
+
+        var count = prompt('how many boxes? ', 16);
+        addDivs(count);
 
         const divs = document.querySelectorAll('div');
         divs.forEach((div) => {
@@ -49,10 +54,9 @@
                 div.classList.add('hovered');
             });
         });
-
-        var count = prompt('how many boxes? ', 16);
-        addDivs(count);
-          
+        
+        document.getElementById("container").style.gridColumns = count;
+        document.getElementById('container').style.gridRow = count;
         
         
     </script>
