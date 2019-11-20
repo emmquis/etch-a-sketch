@@ -7,6 +7,10 @@
 
 </head>
 <body>
+
+    <div id="reset">
+
+    </div>
     <div id="container">
         <!--
         <div class="squares"></div>
@@ -30,6 +34,8 @@
     </div>
 
     <script>
+
+
         function addDivs(count) { 
             //const container = document.querySelector('#container');
             
@@ -45,15 +51,25 @@
     
         }
 
+    
+
+        const reset = document.querySelector('#reset');
+        const button = document.createElement('button');
+        button.classList.add('button');
+        button.textContent = "Reset";
+        reset.appendChild(button);
+        
+
         var count = prompt('how many boxes? ', 16);
         addDivs(count);
 
-        const divs = document.querySelectorAll('div');
+        const divs = document.querySelectorAll('div#container > div');
         divs.forEach((div) => {
             div.addEventListener('mouseover', (e) => {
                 div.classList.add('hovered');
             });
         });
+        
         
         document.getElementById("container").style.gridColumns = count;
         document.getElementById('container').style.gridRow = count;
